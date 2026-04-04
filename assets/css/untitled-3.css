@@ -1,0 +1,38 @@
+.logo-scroller {
+  overflow: hidden;
+  padding: 2rem 0;
+  background: #ffff;
+}
+
+.logo-slide {
+  display: flex !important;
+  animation: scroll 35s linear infinite;
+  width: max-content;
+}
+
+.logo-slide img {
+  height: 50px;
+  width: auto;
+  margin: 0 2rem 0 0;
+  opacity: 1;
+}
+
+.logo-slide img:hover {
+  opacity: 1;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause on hover */
+
+.logo-scroller:hover .logo-slide {
+  animation-play-state: paused;
+}
+
